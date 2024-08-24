@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// Light & Dark Check Box Themes
-class TCheckBoxTheme {
-  TCheckBoxTheme._();
+class MCheckBoxTheme {
+  MCheckBoxTheme._();
 
   /// -- Customizable Light Check Box Theme
   static CheckboxThemeData lightCheckBoxTheme = CheckboxThemeData(

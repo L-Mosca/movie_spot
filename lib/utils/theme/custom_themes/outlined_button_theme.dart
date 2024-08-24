@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// -- Light & Dark Outline Button Themes
-class TOutlinedButtonTheme {
-  TOutlinedButtonTheme._();
+class MOutlinedButtonTheme {
+  MOutlinedButtonTheme._();
 
   /// -- Customizable Light Outline Button Theme
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(

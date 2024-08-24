@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// -- Light & Dark Text Themes
-class TTextTheme {
-  TTextTheme._();
+class MTextTheme {
+  MTextTheme._();
 
   /// Customizable Light Text Theme
   static TextTheme lightTextTheme = TextTheme(

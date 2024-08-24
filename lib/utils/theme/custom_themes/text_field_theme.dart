@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// Light & Dark Text Field Themes
-class TTextFieldTheme {
-  TTextFieldTheme._();
+class MTextFieldTheme {
+  MTextFieldTheme._();
 
   /// -- Customizable Light Text Field Theme
   static InputDecorationTheme lightTextFieldTheme = InputDecorationTheme(

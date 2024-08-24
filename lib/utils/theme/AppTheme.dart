@@ -8,8 +8,8 @@ import 'package:movie_spot/utils/theme/custom_themes/text_field_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/text_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/elevated_button_theme.dart';
 
-class TAppTheme {
-  TAppTheme._();
+class AppTheme {
+  AppTheme._();
 
   /// Light Theme
   static ThemeData lightTheme = ThemeData(
@@ -18,14 +18,14 @@ class TAppTheme {
     brightness: Brightness.light,
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
-    textTheme: TTextTheme.lightTextTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
-    appBarTheme: TAppBarTheme.lightAppBarTheme,
-    bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
-    checkboxTheme: TCheckBoxTheme.lightCheckBoxTheme,
-    chipTheme: TChipTheme.lightChipTheme,
-    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
-    inputDecorationTheme: TTextFieldTheme.lightTextFieldTheme,
+    textTheme: MTextTheme.lightTextTheme,
+    elevatedButtonTheme: MElevatedButtonTheme.lightElevatedButtonTheme,
+    appBarTheme: MAppBarTheme.lightAppBarTheme,
+    bottomSheetTheme: MBottomSheetTheme.lightBottomSheetTheme,
+    checkboxTheme: MCheckBoxTheme.lightCheckBoxTheme,
+    chipTheme: MChipTheme.lightChipTheme,
+    outlinedButtonTheme: MOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: MTextFieldTheme.lightTextFieldTheme,
   );
 
   /// Dark Theme
@@ -35,12 +35,12 @@ class TAppTheme {
       brightness: Brightness.dark,
       primaryColor: Colors.blue,
       scaffoldBackgroundColor: Colors.black,
-      textTheme: TTextTheme.darkTextTheme,
-      elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
-      appBarTheme: TAppBarTheme.darkAppBarTheme,
-      bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
-      checkboxTheme: TCheckBoxTheme.darkCheckBoxTheme,
-      chipTheme: TChipTheme.darkChipTheme,
-      outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
-      inputDecorationTheme: TTextFieldTheme.darkTextFieldTheme);
+      textTheme: MTextTheme.darkTextTheme,
+      elevatedButtonTheme: MElevatedButtonTheme.darkElevatedButtonTheme,
+      appBarTheme: MAppBarTheme.darkAppBarTheme,
+      bottomSheetTheme: MBottomSheetTheme.darkBottomSheetTheme,
+      checkboxTheme: MCheckBoxTheme.darkCheckBoxTheme,
+      chipTheme: MChipTheme.darkChipTheme,
+      outlinedButtonTheme: MOutlinedButtonTheme.darkOutlinedButtonTheme,
+      inputDecorationTheme: MTextFieldTheme.darkTextFieldTheme);
 }

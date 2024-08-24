@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// -- Light & Dark App Bar Themes
-class TAppBarTheme {
-  TAppBarTheme._();
+class MAppBarTheme {
+  MAppBarTheme._();
 
   /// -- Customizable Light App Bar Theme
   static const lightAppBarTheme = AppBarTheme(

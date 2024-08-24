@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// -- Light & Dark Elevated Button Themes
-class TElevatedButtonTheme {
-  TElevatedButtonTheme._();
+class MElevatedButtonTheme {
+  MElevatedButtonTheme._();
 
   /// -- Customizable Light Elevated Button Theme
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(

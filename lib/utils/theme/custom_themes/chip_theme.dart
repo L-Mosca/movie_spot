@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// -- Light & Dark Chip Themes
-class TChipTheme {
-  TChipTheme._();
+class MChipTheme {
+  MChipTheme._();
 
   /// -- Customizable Light Chip Theme
   static ChipThemeData lightChipTheme = ChipThemeData(
