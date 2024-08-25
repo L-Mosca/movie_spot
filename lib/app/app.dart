@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:movie_spot/app/state_provider/app_state_provider.dart';
+import 'package:movie_spot/app/state_provider/localization_state_provider.dart';
+import 'package:movie_spot/app/state_provider/theme_state_provider.dart';
 import 'package:movie_spot/localization/app_localization_delegate.dart';
 import 'package:movie_spot/localization/en_us/en_us.dart';
 import 'package:movie_spot/localization/pt_br/pt_br.dart';
 import 'package:movie_spot/router/app_router.dart';
-import 'package:movie_spot/utils/localizarion/localization_utils.dart';
+import 'package:movie_spot/utils/localization/localization_utils.dart';
 import 'package:movie_spot/utils/theme/AppTheme.dart';
 
 class App extends StatefulWidget {
@@ -17,8 +18,11 @@ class App extends StatefulWidget {
 
 class _AppState extends State<App> {
   Locale? _locale;
+  ThemeMode? _themeMode;
 
   void _setLocale(Locale locale) => {setState(() => _locale = locale)};
+
+  void _setTheme(ThemeMode theme) => {setState(() => _themeMode = theme)};
 
   @override
   void initState() {
@@ -41,19 +45,23 @@ class _AppState extends State<App> {
       );
     }
 
-    return AppStateProvider(
+    return LocalizationStateProvider(
       locale: _locale!,
       setLocale: _setLocale,
-      child: MaterialApp(
-        locale: _locale,
-        themeMode: ThemeMode.system,
-        theme: AppTheme.lightTheme,
-        darkTheme: AppTheme.darkTheme,
-        routes: AppRouter().routes,
-        initialRoute: "/",
-        localizationsDelegates: _localizationsDelegates,
-        supportedLocales: _supportedLocales,
-        debugShowCheckedModeBanner: false,
+      child: ThemeStateProvider(
+        themeMode: _themeMode,
+        setThemeMode: _setTheme,
+        child: MaterialApp(
+          locale: _locale,
+          themeMode: _themeMode,
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          routes: AppRouter().routes,
+          initialRoute: "/",
+          localizationsDelegates: _localizationsDelegates,
+          supportedLocales: _supportedLocales,
+          debugShowCheckedModeBanner: false,
+        ),
       ),
     );
   }

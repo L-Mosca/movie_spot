@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_spot/app/state_provider/theme_state_provider.dart';
 import 'package:movie_spot/localization/localization_extensions.dart';
-
-import '../../app/state_provider/app_state_provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,16 +8,22 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            final locale = context.getLocale() == const Locale("pt", "BR")
-                ? const Locale('en', 'US')
-                : const Locale('pt', 'BR');
-            context.setLocale(locale);
-          },
-          child: Text(context.appLocalizations.test),
-        ),
+      body: Column(
+        children: [
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                final theme = (context.getThemeMode()) == ThemeMode.light
+                    ? ThemeMode.dark
+                    : ThemeMode.light;
+
+                context.setThemeMode(theme);
+              },
+              child: Text(context.appLocalizations.test),
+            ),
+          ),
+          Text(context.appLocalizations.test)
+        ],
       ),
     );
   }
