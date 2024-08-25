@@ -53,6 +53,7 @@ class _AppState extends State<App> {
         initialRoute: "/",
         localizationsDelegates: _localizationsDelegates,
         supportedLocales: _supportedLocales,
+        debugShowCheckedModeBanner: false,
       ),
     );
   }
