@@ -1,4 +1,4 @@
-import 'package:movie_spot/copyable.dart';
+import 'package:movie_spot/app/state_provider/copyable.dart';
 
 enum HomeStatus { initial }
 
