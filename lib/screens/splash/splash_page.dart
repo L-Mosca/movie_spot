@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie_spot/app/providers/localization_provider.dart';
 import 'package:movie_spot/localization/localization_extensions.dart';
 import 'package:movie_spot/screens/splash/bloc/splash_state.dart';
 
@@ -10,6 +11,7 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 2), () {});
     return BlocListener<SplashBloc, SplashState>(
       listener: _onPageChanged,
       child: Scaffold(body: _appLogo(context)),
@@ -18,6 +20,10 @@ class SplashPage extends StatelessWidget {
 
   void _onPageChanged(BuildContext context, SplashState state) {
     if (state.listener == SplashListener.toLogin) {
+      final locale = View.of(context).platformDispatcher.locale;
+
+      context.setLocale(locale);
+
       Navigator.of(context).pushNamedAndRemoveUntil(
         '/login',
         (Route<dynamic> route) => false,
