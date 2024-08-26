@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_spot/app/state_provider/theme_state_provider.dart';
+import 'package:movie_spot/app/providers/theme_provider.dart';
 import 'package:movie_spot/localization/localization_extensions.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
               child: Text(context.appLocalizations.test),
             ),
           ),
-          Text(context.appLocalizations.test)
+          Text(context.appLocalizations.test),
         ],
       ),
     );

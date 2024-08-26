@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 
-class ThemeStateProvider extends InheritedWidget {
+/// Use to manage main app widget state
+/// At this moment, this widget notify themes changes.
+class ThemeProvider extends InheritedWidget {
   final ThemeMode? themeMode;
   final Function(ThemeMode) setThemeMode;
 
-  const ThemeStateProvider({
+  const ThemeProvider({
     super.key,
     required super.child,
     required this.themeMode,
     required this.setThemeMode,
   });
 
-  static ThemeStateProvider of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<ThemeStateProvider>()!;
+  static ThemeProvider of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<ThemeProvider>()!;
   }
 
   @override
-  bool updateShouldNotify(ThemeStateProvider oldWidget) {
+  bool updateShouldNotify(ThemeProvider oldWidget) {
     if (themeMode == null) return false;
     return themeMode != oldWidget.themeMode;
   }
@@ -27,7 +29,7 @@ class ThemeStateProvider extends InheritedWidget {
 /// -> setThemeMode => Change theme mode and switch between dark and light themes
 extension ThemeProviderExtensions on BuildContext {
   ThemeMode getThemeMode() {
-    final theme = ThemeStateProvider.of(this).themeMode;
+    final theme = ThemeProvider.of(this).themeMode;
     if (theme == null) {
       return (MediaQuery.of(this).platformBrightness == Brightness.dark)
           ? ThemeMode.dark
@@ -37,6 +39,6 @@ extension ThemeProviderExtensions on BuildContext {
   }
 
   void setThemeMode(ThemeMode themeMode) {
-    ThemeStateProvider.of(this).setThemeMode(themeMode);
+    ThemeProvider.of(this).setThemeMode(themeMode);
   }
 }

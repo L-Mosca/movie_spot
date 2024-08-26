@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:movie_spot/app/state_provider/localization_state_provider.dart';
-import 'package:movie_spot/app/state_provider/theme_state_provider.dart';
+import 'package:movie_spot/app/providers/localization_provider.dart';
+import 'package:movie_spot/app/providers/theme_provider.dart';
 import 'package:movie_spot/localization/app_localization_delegate.dart';
 import 'package:movie_spot/localization/en_us/en_us.dart';
 import 'package:movie_spot/localization/pt_br/pt_br.dart';
@@ -45,24 +45,24 @@ class _AppState extends State<App> {
       );
     }
 
-    return LocalizationStateProvider(
+    return LocalizationProvider(
       locale: _locale!,
       setLocale: _setLocale,
-      child: ThemeStateProvider(
+      child: ThemeProvider(
         themeMode: _themeMode,
         setThemeMode: _setTheme,
         child: MaterialApp(
-          locale: _locale,
-          themeMode: _themeMode,
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
-          routes: AppRouter().routes,
-          initialRoute: "/",
-          localizationsDelegates: _localizationsDelegates,
-          supportedLocales: _supportedLocales,
-          debugShowCheckedModeBanner: false,
+            locale: _locale,
+            themeMode: _themeMode,
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            routes: AppRouter().routes,
+            initialRoute: "/",
+            localizationsDelegates: _localizationsDelegates,
+            supportedLocales: _supportedLocales,
+            debugShowCheckedModeBanner: false,
+          ),
         ),
-      ),
     );
   }
 

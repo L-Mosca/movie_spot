@@ -2,23 +2,23 @@ import 'package:flutter/widgets.dart';
 
 /// Use to manage main app widget state
 /// At this moment, this widget notify localization changes to switch supported strings
-class LocalizationStateProvider extends InheritedWidget {
+class LocalizationProvider extends InheritedWidget {
   final Locale locale;
   final Function(Locale) setLocale;
 
-  const LocalizationStateProvider({
+  const LocalizationProvider({
     super.key,
     required super.child,
     required this.locale,
     required this.setLocale,
   });
 
-  static LocalizationStateProvider of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<LocalizationStateProvider>()!;
+  static LocalizationProvider of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<LocalizationProvider>()!;
   }
 
   @override
-  bool updateShouldNotify(LocalizationStateProvider oldWidget) {
+  bool updateShouldNotify(LocalizationProvider oldWidget) {
     return locale != oldWidget.locale;
   }
 }
@@ -28,10 +28,10 @@ class LocalizationStateProvider extends InheritedWidget {
 /// -> setLocale => Change locale and switch supported string resources
 extension StateProviderExtensions on BuildContext {
   Locale getLocale() {
-    return LocalizationStateProvider.of(this).locale;
+    return LocalizationProvider.of(this).locale;
   }
 
   void setLocale(Locale locale) {
-    LocalizationStateProvider.of(this).setLocale(locale);
+    LocalizationProvider.of(this).setLocale(locale);
   }
 }
