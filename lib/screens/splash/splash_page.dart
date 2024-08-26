@@ -21,7 +21,6 @@ class SplashPage extends StatelessWidget {
   void _onPageChanged(BuildContext context, SplashState state) {
     if (state.listener == SplashListener.toLogin) {
       final locale = View.of(context).platformDispatcher.locale;
-
       context.setLocale(locale);
 
       Navigator.of(context).pushNamedAndRemoveUntil(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_spot/screens/login/bloc/login_bloc.dart';
 import 'package:movie_spot/screens/login/bloc/login_event.dart';
+import 'package:movie_spot/screens/login/greetings/bloc/greetings_bloc.dart';
+import 'package:movie_spot/screens/login/greetings/bloc/greetings_event.dart';
 import 'package:movie_spot/screens/login/login_page.dart';
 import 'package:movie_spot/screens/login/sign_in/bloc/sign_in_bloc.dart';
 import 'package:movie_spot/screens/login/sign_in/bloc/sign_in_event.dart';
@@ -17,6 +19,11 @@ class LoginRouter {
             final loginBloc = LoginBloc();
             loginBloc.add(LoginInitEvent());
             return loginBloc;
+          }),
+          BlocProvider<GreetingsBloc>(create: (_) {
+            final greetingsBloc = GreetingsBloc();
+            greetingsBloc.add(GreetingsInitEvent());
+            return greetingsBloc;
           }),
           BlocProvider<SignInBloc>(create: (_) {
             final signInBloc = SignInBloc();
