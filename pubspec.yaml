@@ -14,18 +14,21 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:
+    sdk: flutter
+
   # Utility Packages
   intl: ^0.19.0
+  connectivity_plus: ^6.0.5
 
   # Icons
   cupertino_icons: ^1.0.8
 
   # State Management
-  get: ^4.6.5
+  flutter_bloc: ^8.1.2
 
   # Product Specific
-
-
+  equatable: ^2.0.0
 
 #-------------------- ./ PACKAGES END ----------------------#
 
@@ -42,8 +45,8 @@ flutter:
 
   #-------------------- LOCAL ASSETS ----------------------#
   assets:
-    - assets/images
-    - assets/icons
+    - assets/images/
+    - assets/icons/
 
   #-------------------- LOCAL FONTS ----------------------#
   fonts:

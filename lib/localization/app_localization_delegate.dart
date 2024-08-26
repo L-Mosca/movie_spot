@@ -33,9 +33,11 @@ class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
 
   @override
   Future<AppLocalizations> load(Locale locale) async {
-    return locale == const Locale("pt", "BR")
-        ? appLocalizations = ptBrLocalization
+    appLocalizations = locale == const Locale("pt", "BR")
+        ? ptBrLocalization
         : enUsLocalization;
+
+    return appLocalizations!;
   }
 
   @override
