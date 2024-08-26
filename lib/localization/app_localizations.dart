@@ -1,3 +1,3 @@
 abstract class AppLocalizations {
-  String get test;
+  String get appName;
 }
