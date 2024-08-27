@@ -19,10 +19,10 @@ class HomePage extends StatelessWidget {
 
                 context.setThemeMode(theme);
               },
-              child: Text(context.appLocalizations.test),
+              child: Text(context.appLocalizations.appName),
             ),
           ),
-          Text(context.appLocalizations.test),
+          Text(context.appLocalizations.appName),
         ],
       ),
     );

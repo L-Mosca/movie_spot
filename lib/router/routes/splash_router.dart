@@ -9,9 +9,9 @@ class SplashRouter {
   SplashRouter();
 
   static Widget get page => BlocProvider<SplashBloc>(
-        create: (_) {
+        create: (context) {
           final splashBloc = SplashBloc();
-          splashBloc.add(SplashInitEvent());
+          splashBloc.add(SplashInitEvent(context: context));
           return splashBloc;
         },
         child: const SplashPage(),

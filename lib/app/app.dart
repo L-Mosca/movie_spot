@@ -6,7 +6,6 @@ import 'package:movie_spot/localization/app_localization_delegate.dart';
 import 'package:movie_spot/localization/en_us/en_us.dart';
 import 'package:movie_spot/localization/pt_br/pt_br.dart';
 import 'package:movie_spot/router/app_router.dart';
-import 'package:movie_spot/utils/localization/localization_utils.dart';
 import 'package:movie_spot/utils/theme/AppTheme.dart';
 
 class App extends StatefulWidget {
@@ -25,44 +24,25 @@ class _AppState extends State<App> {
   void _setTheme(ThemeMode theme) => {setState(() => _themeMode = theme)};
 
   @override
-  void initState() {
-    super.initState();
-    // TODO depois arrumar essa gambiarra: iniciar as configurações de localização em uma splash screen
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final deviceLocale = View.of(context).platformDispatcher.locale;
-      setState(() {
-        _locale = LocalizationUtils.getSupportedLocale(deviceLocale);
-      });
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    // TODO depois arrumar essa gambiarra: iniciar as configurações de localização em uma splash screen
-    if (_locale == null) {
-      return const Center(
-        child: CircularProgressIndicator(),
-      );
-    }
-
     return LocalizationProvider(
-      locale: _locale!,
+      locale: _locale,
       setLocale: _setLocale,
       child: ThemeProvider(
         themeMode: _themeMode,
         setThemeMode: _setTheme,
         child: MaterialApp(
-            locale: _locale,
-            themeMode: _themeMode,
-            theme: AppTheme.lightTheme,
-            darkTheme: AppTheme.darkTheme,
-            routes: AppRouter().routes,
-            initialRoute: "/",
-            localizationsDelegates: _localizationsDelegates,
-            supportedLocales: _supportedLocales,
-            debugShowCheckedModeBanner: false,
-          ),
+          locale: _locale,
+          themeMode: _themeMode,
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          routes: AppRouter().routes,
+          initialRoute: "/",
+          localizationsDelegates: _localizationsDelegates,
+          supportedLocales: _supportedLocales,
+          debugShowCheckedModeBanner: false,
         ),
+      ),
     );
   }
 
