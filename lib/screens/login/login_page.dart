@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {
                   context.navigate(HomeRouter.page);
                 },
-                child: Text(context.appLocalizations.test))
+                child: Text(context.appLocalizations.appName))
           ],
         ),
       ),
