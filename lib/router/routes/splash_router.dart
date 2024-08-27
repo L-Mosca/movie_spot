@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_spot/screens/splash/bloc/splash_event.dart';
-import 'package:movie_spot/screens/splash/splash_page.dart';
+import 'package:movie_spot/ui/screens/splash/bloc/splash_event.dart';
+import 'package:movie_spot/ui/screens/splash/splash_page.dart';
 
-import '../../screens/splash/bloc/splash_bloc.dart';
+import '../../ui/screens/splash/bloc/splash_bloc.dart';
 
 class SplashRouter {
   SplashRouter();

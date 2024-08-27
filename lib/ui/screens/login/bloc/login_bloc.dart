@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_spot/screens/login/bloc/login_event.dart';
-import 'package:movie_spot/screens/login/bloc/login_state.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_event.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginState _loginState = const LoginState();

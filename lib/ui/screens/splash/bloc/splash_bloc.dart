@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_spot/screens/splash/bloc/splash_event.dart';
-import 'package:movie_spot/screens/splash/bloc/splash_state.dart';
+import 'package:movie_spot/ui/screens/splash/bloc/splash_event.dart';
+import 'package:movie_spot/ui/screens/splash/bloc/splash_state.dart';
 
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
   SplashState _splashState = const SplashState();

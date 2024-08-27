@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_spot/screens/login/greetings/bloc/greetings_event.dart';
-import 'package:movie_spot/screens/login/greetings/bloc/greetings_state.dart';
+import 'package:movie_spot/ui/screens/login/greetings/bloc/greetings_event.dart';
+import 'package:movie_spot/ui/screens/login/greetings/bloc/greetings_state.dart';
 
 class GreetingsBloc extends Bloc<GreetingsEvent, GreetingsState> {
   GreetingsState _greetingsState = const GreetingsState();

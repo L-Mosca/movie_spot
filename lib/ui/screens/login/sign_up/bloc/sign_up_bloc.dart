@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_spot/screens/login/sign_up/bloc/sign_up_event.dart';
-import 'package:movie_spot/screens/login/sign_up/bloc/sign_up_state.dart';
+import 'package:movie_spot/ui/screens/login/sign_up/bloc/sign_up_event.dart';
+import 'package:movie_spot/ui/screens/login/sign_up/bloc/sign_up_state.dart';
 
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   SignUpState _signUpState = const SignUpState();

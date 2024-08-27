@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_spot/screens/login/bloc/login_bloc.dart';
-import 'package:movie_spot/screens/login/bloc/login_state.dart';
-import 'package:movie_spot/screens/login/sign_in/sign_in_page.dart';
-import 'package:movie_spot/screens/login/sign_up/sign_up_page.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_bloc.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_state.dart';
+import 'package:movie_spot/ui/screens/login/sign_in/sign_in_page.dart';
+import 'package:movie_spot/ui/screens/login/sign_up/sign_up_page.dart';
 
 import 'greetings/greetings_page.dart';
 

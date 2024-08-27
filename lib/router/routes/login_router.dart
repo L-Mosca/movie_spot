@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_spot/screens/login/bloc/login_bloc.dart';
-import 'package:movie_spot/screens/login/bloc/login_event.dart';
-import 'package:movie_spot/screens/login/greetings/bloc/greetings_bloc.dart';
-import 'package:movie_spot/screens/login/greetings/bloc/greetings_event.dart';
-import 'package:movie_spot/screens/login/login_page.dart';
-import 'package:movie_spot/screens/login/sign_in/bloc/sign_in_bloc.dart';
-import 'package:movie_spot/screens/login/sign_in/bloc/sign_in_event.dart';
-import 'package:movie_spot/screens/login/sign_up/bloc/sign_up_bloc.dart';
-import 'package:movie_spot/screens/login/sign_up/bloc/sign_up_event.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_bloc.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_event.dart';
+import 'package:movie_spot/ui/screens/login/greetings/bloc/greetings_bloc.dart';
+import 'package:movie_spot/ui/screens/login/greetings/bloc/greetings_event.dart';
+import 'package:movie_spot/ui/screens/login/login_page.dart';
+import 'package:movie_spot/ui/screens/login/sign_in/bloc/sign_in_bloc.dart';
+import 'package:movie_spot/ui/screens/login/sign_in/bloc/sign_in_event.dart';
+import 'package:movie_spot/ui/screens/login/sign_up/bloc/sign_up_bloc.dart';
+import 'package:movie_spot/ui/screens/login/sign_up/bloc/sign_up_event.dart';
 
 class LoginRouter {
   const LoginRouter();

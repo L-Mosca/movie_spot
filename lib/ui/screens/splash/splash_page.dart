@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_spot/app/providers/localization_provider.dart';
 import 'package:movie_spot/localization/localization_extensions.dart';
-import 'package:movie_spot/screens/splash/bloc/splash_state.dart';
+import 'package:movie_spot/ui/screens/splash/bloc/splash_state.dart';
 
 import 'bloc/splash_bloc.dart';
 

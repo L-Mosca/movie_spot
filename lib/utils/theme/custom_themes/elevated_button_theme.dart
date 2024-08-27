@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_spot/utils/constants/sizes.dart';
 
 /// -- Light & Dark Elevated Button Themes
 class MElevatedButtonTheme {
@@ -15,7 +16,7 @@ class MElevatedButtonTheme {
       side: const BorderSide(color: Colors.blue),
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.buttonRadius)),
     ),
   );
 
@@ -24,10 +25,10 @@ class MElevatedButtonTheme {
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.white,
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.blue.shade900,
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
-      side: const BorderSide(color: Colors.blue),
+      side: BorderSide(color: Colors.blue.shade900),
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
