@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie_spot/app/providers/theme_provider.dart';
 import 'package:movie_spot/ui/screens/login/bloc/login_bloc.dart';
-import 'package:movie_spot/ui/screens/login/bloc/login_event.dart';
 import 'package:movie_spot/ui/screens/login/sign_in/bloc/sign_in_bloc.dart';
 import 'package:movie_spot/ui/screens/login/sign_in/widgets/sign_in_back_button.dart';
-import 'package:movie_spot/ui/system_design/ms_back_button.dart';
+import 'package:movie_spot/ui/screens/login/sign_in/widgets/sign_in_title.dart';
 import 'package:movie_spot/utils/constants/sizes.dart';
 
 import 'bloc/sign_in_state.dart';
@@ -30,14 +30,20 @@ class SignInPage extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: AppSizes.lg),
         child: Column(
           children: [
-            SignInBackButton(onPressed: _back(bloc))
+            SignInBackButton(onPressed: _back(bloc, context)),
+            const Expanded(
+              child: Column(
+                children: [SignInTitle()],
+              ),
+            )
           ],
         ),
       );
     });
   }
 
-  void Function() _back(LoginBloc bloc) => () {
-        bloc.add(LoginBackPageEvent());
+  void Function() _back(LoginBloc bloc, BuildContext context) => () {
+        context.switchThemeMode();
+        //bloc.add(LoginBackPageEvent());
       };
 }

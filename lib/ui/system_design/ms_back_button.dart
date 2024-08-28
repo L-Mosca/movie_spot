@@ -9,13 +9,10 @@ class MsBackButton extends StatelessWidget {
     this.icon,
     this.size,
     this.onPressed,
-    this.iconColor,
     this.iconLightColor,
     this.iconDarkColor,
-    this.borderColor,
     this.borderLightColor,
     this.borderDarkColor,
-    this.containerColor,
     this.containerLightColor,
     this.containerDarkColor,
   });
@@ -24,35 +21,39 @@ class MsBackButton extends StatelessWidget {
   final double? size;
   final void Function()? onPressed;
 
-  final Color? iconColor;
   final Color? iconLightColor;
   final Color? iconDarkColor;
 
-  final Color? borderColor;
   final Color? borderLightColor;
   final Color? borderDarkColor;
 
-  final Color? containerColor;
   final Color? containerLightColor;
   final Color? containerDarkColor;
 
   @override
   Widget build(BuildContext context) {
-    final theme = context.getThemeMode();
-    Color contentColor = _contentColor(context, theme);
-    Color borderColor = _borderColor(context, theme);
+    final isDark = context.isDarkMode();
+    Color contentColor = _contentColor(isDark);
+    Color borderColor = _borderColor(isDark);
 
     return GestureDetector(
       onTap: onPressed,
       child: IntrinsicWidth(
         child: Container(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(14.0),
           decoration: _decoration(contentColor, borderColor),
           child: Center(
-            child: Icon(
-              icon ?? Icons.arrow_back_ios_new,
-              size: size ?? 26.0,
-              color: contentColor,
+            child: Row(
+              children: [
+                Expanded(
+                  child: Icon(
+                    icon ?? Icons.arrow_back_ios_new,
+                    size: size ?? 22.0,
+                    color: contentColor,
+                  ),
+                ),
+                const SizedBox(width: 2)
+              ],
             ),
           ),
         ),
@@ -65,33 +66,22 @@ class MsBackButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppSizes.buttonRadius),
       border: Border.all(
         color: borderColor,
-        width: AppSizes.strokeDefaultWidth,
+        width: 2,
       ),
     );
   }
 
-  Color _contentColor(BuildContext context, ThemeMode theme) {
-    if (iconColor != null) return iconColor!;
+  Color _contentColor(bool isDark) {
+    if (isDark && iconDarkColor != null) return iconDarkColor!;
+    if (!isDark && iconLightColor != null) return iconLightColor!;
 
-    if (theme == ThemeMode.dark && iconDarkColor != null) return iconDarkColor!;
-    if (theme == ThemeMode.light && iconLightColor != null) {
-      return iconLightColor!;
-    }
-
-    return (theme == ThemeMode.light) ? AppColors.dark : AppColors.grey;
+    return (isDark) ? AppColors.grey : AppColors.dark;
   }
 
-  Color _borderColor(BuildContext context, ThemeMode theme) {
-    if (borderColor != null) return borderColor!;
+  Color _borderColor(bool isDark) {
+    if (isDark && borderDarkColor != null) return borderDarkColor!;
+    if (!isDark && borderLightColor != null) return borderLightColor!;
 
-    if (theme == ThemeMode.dark && borderDarkColor != null) {
-      return borderDarkColor!;
-    } else {
-      if (borderLightColor != null) return borderLightColor!;
-    }
-
-    return (theme == ThemeMode.dark)
-        ? AppColors.darkGrey.withOpacity(0.3)
-        : AppColors.grey;
+    return (isDark) ? AppColors.darkGrey.withOpacity(0.4) : AppColors.grey;
   }
 }
