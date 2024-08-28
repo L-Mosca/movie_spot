@@ -20,7 +20,9 @@ class AppSizes {
   // Button Sizes
   static const double buttonHeight = 18.0;
   static const double buttonRadius = 12.0;
-  static const double buttonWidth = 120.0;
+  static const double buttonWidthSm = 120.0;
+  static const double buttonWidthMd = 240.0;
+  static const double buttonWidthLg = 360.0;
 
   // App Bar Height
   static const double appBarHeight = 56.0;
