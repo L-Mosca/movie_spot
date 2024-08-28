@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movie_spot/router/routes/login_router.dart';
-import 'package:movie_spot/router/routes/splash_router.dart';
+import 'package:movie_spot/router/routes/login/login_router.dart';
+import 'package:movie_spot/router/routes/splash/splash_router.dart';
 import 'package:movie_spot/utils/constants/enums.dart';
 
-import 'routes/home_router.dart';
+import 'routes/home/home_router.dart';
 
 class AppRouter {
   Map<String, WidgetBuilder> get routes {

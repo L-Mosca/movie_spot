@@ -1,4 +1,4 @@
-import 'package:movie_spot/core/result.dart';
+import 'package:movie_spot/app/state_management/result.dart';
 
 import '../../../domain/repositories/movie/movie_repository.dart';
 
