@@ -1,10 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_bloc.dart';
+import 'package:movie_spot/ui/screens/login/bloc/login_event.dart';
+import 'package:movie_spot/ui/screens/login/sign_in/bloc/sign_in_bloc.dart';
+import 'package:movie_spot/ui/screens/login/sign_in/widgets/sign_in_back_button.dart';
+import 'package:movie_spot/ui/system_design/ms_back_button.dart';
+import 'package:movie_spot/utils/constants/sizes.dart';
+
+import 'bloc/sign_in_state.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Container(color: Colors.blueAccent));
+    final loginBloc = BlocProvider.of<LoginBloc>(context);
+
+    return BlocListener<SignInBloc, SignInState>(
+      listener: _onChanged,
+      child: _pageContent(loginBloc),
+    );
   }
+
+  void _onChanged(BuildContext context, SignInState state) {}
+
+  Widget _pageContent(LoginBloc bloc) {
+    return BlocBuilder<SignInBloc, SignInState>(builder: (context, state) {
+      return Container(
+        margin: const EdgeInsets.symmetric(horizontal: AppSizes.lg),
+        child: Column(
+          children: [
+            SignInBackButton(onPressed: _back(bloc))
+          ],
+        ),
+      );
+    });
+  }
+
+  void Function() _back(LoginBloc bloc) => () {
+        bloc.add(LoginBackPageEvent());
+      };
 }

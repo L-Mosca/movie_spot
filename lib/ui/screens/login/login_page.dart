@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
   void _changePage(int pageIndex) {
     _pageController.animateToPage(
       pageIndex,
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
     );
   }

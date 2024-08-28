@@ -4,7 +4,7 @@ import 'package:movie_spot/localization/localization_extensions.dart';
 import 'package:movie_spot/ui/screens/login/bloc/login_event.dart';
 import 'package:movie_spot/ui/system_design/ms_elevated_button.dart';
 import 'package:movie_spot/utils/constants/app_constants.dart';
-import 'package:movie_spot/utils/constants/colors.dart';
+import 'package:movie_spot/utils/constants/app_colors.dart';
 
 class GreetingsLoginButton extends StatelessWidget {
   const GreetingsLoginButton({super.key, required this.onPressed});
