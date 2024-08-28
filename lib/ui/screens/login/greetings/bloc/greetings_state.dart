@@ -2,7 +2,7 @@ import 'package:movie_spot/app/state_management/copyable.dart';
 
 enum GreetingsStatus { initial }
 
-enum GreetingsListener { nothing, signIn, signUp }
+enum GreetingsListener { nothing }
 
 class GreetingsState implements Copyable<GreetingsState> {
   const GreetingsState({
