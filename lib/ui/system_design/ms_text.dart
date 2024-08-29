@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_spot/app/providers/theme_provider.dart';
 
+/// Enum that's define text style design
 enum TextType {
   headlineLarge,
   headlineMedium,
@@ -16,6 +17,25 @@ enum TextType {
   labelSmall,
 }
 
+/// Default text widget. By default use bodyMedium as text style.
+///
+/// [text] - Text message
+///
+/// [fontSize] - Text size
+///
+/// [fontWeight] - Text font weight
+///
+/// [textAlign] - Text alignment
+///
+/// [fontLightColor] - Text light font color
+///
+/// [fontDarkColor] - Text dark font color
+///
+/// [maxLines] - Text max lines
+///
+/// [textOverflow] - Text overflow type
+///
+/// [textType] - Text type (headline, body...)
 class MsText extends StatelessWidget {
   const MsText({
     super.key,
@@ -30,17 +50,15 @@ class MsText extends StatelessWidget {
     this.textType,
   });
 
+  // Text setup
   final String text;
   final double? fontSize;
   final FontWeight? fontWeight;
-
   final TextAlign? textAlign;
   final int? maxLines;
   final TextOverflow? textOverflow;
-
   final Color? fontLightColor;
   final Color? fontDarkColor;
-
   final TextType? textType;
 
   @override

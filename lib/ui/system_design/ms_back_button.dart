@@ -3,30 +3,53 @@ import 'package:movie_spot/app/providers/theme_provider.dart';
 import 'package:movie_spot/utils/constants/app_colors.dart';
 import 'package:movie_spot/utils/constants/sizes.dart';
 
+/// Back button default widget. It's a widget that's contains a back icon and is wrapped by a container with rounded border.
+///
+/// [icon] - Icon type
+///
+/// [size] - Icon size
+///
+/// [onPressed] - Callback when click
+///
+/// [iconLightColor] - Icon light color
+///
+/// [iconDarkColor] - Icon dark color
+///
+/// [borderLightColor] - Container border light color
+///
+/// [borderDarkColor] - Container border dark color
+///
+/// [containerLightColor] - Container background light color
+///
+/// [containerDarkColor] - Container background dark color
+///
 class MsBackButton extends StatelessWidget {
   const MsBackButton({
     super.key,
+    // Icon design
     this.icon,
     this.size,
     this.onPressed,
     this.iconLightColor,
     this.iconDarkColor,
+
+    // Container design
     this.borderLightColor,
     this.borderDarkColor,
     this.containerLightColor,
     this.containerDarkColor,
   });
 
+  // Icon design
   final IconData? icon;
   final double? size;
   final void Function()? onPressed;
-
   final Color? iconLightColor;
   final Color? iconDarkColor;
 
+  // Container design
   final Color? borderLightColor;
   final Color? borderDarkColor;
-
   final Color? containerLightColor;
   final Color? containerDarkColor;
 
@@ -74,14 +97,12 @@ class MsBackButton extends StatelessWidget {
   Color _contentColor(bool isDark) {
     if (isDark && iconDarkColor != null) return iconDarkColor!;
     if (!isDark && iconLightColor != null) return iconLightColor!;
-
     return (isDark) ? AppColors.grey : AppColors.dark;
   }
 
   Color _borderColor(bool isDark) {
     if (isDark && borderDarkColor != null) return borderDarkColor!;
     if (!isDark && borderLightColor != null) return borderLightColor!;
-
     return (isDark) ? AppColors.darkGrey.withOpacity(0.4) : AppColors.grey;
   }
 }

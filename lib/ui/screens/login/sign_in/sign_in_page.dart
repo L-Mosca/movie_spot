@@ -5,6 +5,7 @@ import 'package:movie_spot/ui/screens/login/bloc/login_bloc.dart';
 import 'package:movie_spot/ui/screens/login/sign_in/bloc/sign_in_bloc.dart';
 import 'package:movie_spot/ui/screens/login/sign_in/widgets/sign_in_back_button.dart';
 import 'package:movie_spot/ui/screens/login/sign_in/widgets/sign_in_title.dart';
+import 'package:movie_spot/ui/system_design/ms_text_field.dart';
 import 'package:movie_spot/utils/constants/sizes.dart';
 
 import 'bloc/sign_in_state.dart';
@@ -31,9 +32,13 @@ class SignInPage extends StatelessWidget {
         child: Column(
           children: [
             SignInBackButton(onPressed: _back(bloc, context)),
-            const Expanded(
+            Expanded(
               child: Column(
-                children: [SignInTitle()],
+                children: [
+                  const SignInTitle(),
+                  const SizedBox(height: 100),
+                  MsTextField(onTextChanged: (_) {}, hintText: 'hint')
+                ],
               ),
             )
           ],

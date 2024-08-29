@@ -2,10 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:movie_spot/utils/constants/enums.dart';
 import 'package:movie_spot/utils/constants/sizes.dart';
 
+/// Default elevated button widget. Itá wrapped by a constrained box, and it's widget limited elevated button width.
+///
+/// [onPressed] - Button onPressed callback
+///
+/// [padding] - Button internal padding
+///
+/// [width] - Button width
+///
+/// [height] - Button height
+///
+/// [buttonMaxWidth] - Enum that's define button max width
+///
+/// [borderRadius] - Button border radius
+///
+/// [background] - Button background color
+///
+/// [borderColor] - Button border color
+///
+/// [text] - Button center text
+///
+/// [fontSize] - Button text size
+///
+/// [fontColor] - Button text color
+///
+/// [fontWeight] - Button text weight
 class MsElevatedButton extends StatelessWidget {
   const MsElevatedButton({
     super.key,
-    required this.text,
+    // Button general setup and design
     required this.onPressed,
     this.padding,
     this.width,
@@ -14,22 +39,26 @@ class MsElevatedButton extends StatelessWidget {
     this.borderRadius,
     this.background,
     this.borderColor,
+
+    // Elevated Button text setup
+    required this.text,
     this.fontSize,
     this.fontColor,
     this.fontWeight,
   });
 
-  final String text;
+  // Button general setup and design
   final void Function() onPressed;
   final EdgeInsets? padding;
   final double? width;
   final double? height;
   final ButtonMaxWidth? buttonMaxWidth;
-
   final double? borderRadius;
   final Color? background;
   final Color? borderColor;
 
+  // Elevated Button text setup
+  final String text;
   final double? fontSize;
   final Color? fontColor;
   final FontWeight? fontWeight;
