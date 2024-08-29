@@ -17,7 +17,11 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final _widgetList = const [GreetingsPage(), SignInPage(), SignUpPage()];
+  final _widgetList = [
+    const GreetingsPage(),
+    const SignInPage(),
+    const SignUpPage()
+  ];
   final _pageController = PageController(initialPage: 0);
 
   @override
