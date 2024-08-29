@@ -9,4 +9,22 @@ class EnUs implements AppLocalizations {
 
   @override
   String get signUp => "Register";
+
+  @override
+  String get forgotPassword => "Forgot Password?";
+
+  @override
+  String get insertEmail => "Enter your email";
+
+  @override
+  String get insertPassword => "Enter your password";
+
+  @override
+  String get registerNow => "Register Now";
+
+  @override
+  String get welcomeBack => "Welcome back!";
+
+  @override
+  String get dontHasAccount =>"Don't hava an account?";
 }

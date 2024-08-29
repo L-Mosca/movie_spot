@@ -9,4 +9,22 @@ class PtBr implements AppLocalizations {
 
   @override
   String get signUp => "Cadastrar";
+
+  @override
+  String get forgotPassword => "Esqueceu a senha?";
+
+  @override
+  String get insertEmail => "Insira seu e-mail";
+
+  @override
+  String get insertPassword => "Insira sua senha";
+
+  @override
+  String get registerNow => "Cadastre-se Agora";
+
+  @override
+  String get welcomeBack => "Bem-Vindo(a) de volta!";
+
+  @override
+  String get dontHasAccount =>"Não tem uma conta?";
 }

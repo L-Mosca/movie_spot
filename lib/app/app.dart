@@ -6,7 +6,7 @@ import 'package:movie_spot/localization/app_localization_delegate.dart';
 import 'package:movie_spot/localization/en_us/en_us.dart';
 import 'package:movie_spot/localization/pt_br/pt_br.dart';
 import 'package:movie_spot/router/app_router.dart';
-import 'package:movie_spot/utils/theme/AppTheme.dart';
+import 'package:movie_spot/utils/theme/app_themes.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
