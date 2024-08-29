@@ -3,10 +3,10 @@ import 'package:movie_spot/utils/theme/custom_themes/app_bar_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/check_box_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/chip_theme.dart';
+import 'package:movie_spot/utils/theme/custom_themes/elevated_button_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/outlined_button_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/text_field_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/text_theme.dart';
-import 'package:movie_spot/utils/theme/custom_themes/elevated_button_theme.dart';
 
 class AppTheme {
   AppTheme._();

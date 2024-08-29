@@ -67,4 +67,7 @@ class AppSizes {
 
   // Grid View Spacing
   static const double gridViewSpacing = 16.0;
+
+  // Stroke Width
+  static const double strokeDefaultWidth = 1.0;
 }

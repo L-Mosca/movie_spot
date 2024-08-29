@@ -17,7 +17,11 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final _widgetList = const [GreetingsPage(), SignInPage(), SignUpPage()];
+  final _widgetList = [
+    const GreetingsPage(),
+    const SignInPage(),
+    const SignUpPage()
+  ];
   final _pageController = PageController(initialPage: 0);
 
   @override
@@ -67,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
   void _changePage(int pageIndex) {
     _pageController.animateToPage(
       pageIndex,
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
     );
   }
