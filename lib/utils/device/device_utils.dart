@@ -59,7 +59,7 @@ class DeviceUtils {
     return viewInsets.bottom;
   }
 
-  static Future<bool> isKeyboardVisible(BuildContext context) async {
+  static bool isKeyboardVisible(BuildContext context) {
     final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom > 0;
   }
