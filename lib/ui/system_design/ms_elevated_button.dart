@@ -85,7 +85,7 @@ class MsElevatedButton extends StatelessWidget {
   }
 
   double get _maxWidth {
-    if (buttonMaxWidth == null) return AppSizes.buttonWidthLg;
+    if (buttonMaxWidth == null) return double.infinity;
 
     switch (buttonMaxWidth) {
       case ButtonMaxWidth.small:

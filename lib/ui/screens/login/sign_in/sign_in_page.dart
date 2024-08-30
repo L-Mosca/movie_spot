@@ -72,6 +72,7 @@ class _SignInPageState extends State<SignInPage> {
             SignInForgotPassword(onPressed: _navigateToSignUp(bloc)),
             const SizedBox(height: AppSizes.xl),
             SignInLoginButton(onPressed: _doLogin()),
+            const SizedBox(height: 100.0),
           ],
         ),
       ),
