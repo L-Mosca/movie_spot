@@ -174,8 +174,8 @@ class _MsTextFieldState extends State<MsTextField> {
   EdgeInsets get _padding =>
       widget.internalPadding ??
       const EdgeInsets.only(
-        top: AppSizes.xs,
-        bottom: AppSizes.xs,
+        top: AppSizes.sm,
+        bottom: AppSizes.sm,
         left: AppSizes.md,
         right: AppSizes.xs,
       );

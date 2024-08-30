@@ -26,5 +26,26 @@ class PtBr implements AppLocalizations {
   String get welcomeBack => "Bem-Vindo(a) de volta!";
 
   @override
-  String get dontHasAccount =>"Não tem uma conta?";
+  String get dontHasAccount => "Não tem uma conta?";
+
+  @override
+  String get confirmPassword => "Confirme a senha";
+
+  @override
+  String get email => "E-mail";
+
+  @override
+  String get haveAnAccount => "Já tem uma conta?";
+
+  @override
+  String get loginNow => "Entre agora";
+
+  @override
+  String get password => "Senha";
+
+  @override
+  String get registerHello => "Olá! Cadastre-se para usar o App";
+
+  @override
+  String get username => "Nome de usuário";
 }
