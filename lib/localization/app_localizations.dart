@@ -4,6 +4,7 @@ abstract class AppLocalizations {
   // -- Login --
   String get signIn;
   String get signUp;
+  String get continueGuest;
   String get welcomeBack;
   String get insertEmail;
   String get insertPassword;

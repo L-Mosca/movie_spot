@@ -8,6 +8,9 @@ class EnUs implements AppLocalizations {
   String get signIn => "Login";
 
   @override
+  String get continueGuest => "Continue as a guest";
+
+  @override
   String get signUp => "Register";
 
   @override

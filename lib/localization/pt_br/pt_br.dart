@@ -8,6 +8,9 @@ class PtBr implements AppLocalizations {
   String get signIn => "Entrar";
 
   @override
+  String get continueGuest => "Continue sem login";
+
+  @override
   String get signUp => "Cadastrar";
 
   @override
