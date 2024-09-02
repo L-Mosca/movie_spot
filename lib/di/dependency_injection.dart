@@ -4,10 +4,10 @@ import 'package:movie_spot/di/modules/client_module.dart';
 import 'package:movie_spot/di/modules/repositories_module.dart';
 
 class DependencyInjection {
-  static void init() {
+  static Future<void> init() async {
     Get.put<NetworkController>(NetworkController(), permanent: true);
 
-    ClientModule.init();
+    await ClientModule.init();
     RepositoriesModule.init();
   }
 }
