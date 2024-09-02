@@ -1,11 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie_spot/data/models/user/register_body.dart';
+import 'package:movie_spot/domain/repositories/user/user_repository.dart';
 import 'package:movie_spot/ui/screens/login/sign_up/bloc/sign_up_event.dart';
 import 'package:movie_spot/ui/screens/login/sign_up/bloc/sign_up_state.dart';
 
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
+  final UserRepository userRepository;
   SignUpState _signUpState = const SignUpState();
 
-  SignUpBloc() : super(const SignUpState()) {
+  SignUpBloc(this.userRepository) : super(const SignUpState()) {
     on<SignUpInitEvent>(_init);
     on<SignUpRegisterEvent>(_register);
   }
@@ -19,12 +22,13 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
     SignUpRegisterEvent event,
     Emitter<SignUpState> emitter,
   ) async {
-    final username = event.username;
-    final email = event.email;
-    final password = event.password;
-    final confirmPassword = event.confirmPassword;
+    final registerBody = RegisterBody(
+      username: event.username,
+      email: event.email,
+      password: event.password,
+      confirmPassword: event.confirmPassword,
+    );
 
-    print(
-        "Dados do usuário: username: $username - email: $email - password: $password - confirmPassword: $confirmPassword");
+    await userRepository.register(registerBody: registerBody);
   }
 }
