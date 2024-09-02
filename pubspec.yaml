@@ -49,6 +49,11 @@ flutter:
     - assets/images/
     - assets/icons/
 
+
+  #-------------------- OTHER ASSETS ----------------------#
+    - .keys.json
+
+
   #-------------------- LOCAL FONTS ----------------------#
   fonts:
     - family: Poppins
