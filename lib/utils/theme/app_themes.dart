@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_spot/utils/constants/app_colors.dart';
 import 'package:movie_spot/utils/theme/custom_themes/app_bar_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/check_box_theme.dart';
@@ -34,7 +35,7 @@ class AppTheme {
       fontFamily: 'Poppins',
       brightness: Brightness.dark,
       primaryColor: Colors.blue,
-      scaffoldBackgroundColor: Colors.black,
+      scaffoldBackgroundColor: AppColors.dark,
       textTheme: MTextTheme.darkTextTheme,
       elevatedButtonTheme: MElevatedButtonTheme.darkElevatedButtonTheme,
       appBarTheme: MAppBarTheme.darkAppBarTheme,

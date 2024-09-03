@@ -238,7 +238,7 @@ class _MsTextFieldState extends State<MsTextField> {
     if (isDark && widget.hintDarkColor != null) return widget.hintDarkColor;
     if (!isDark && widget.hintLightColor != null) return widget.hintLightColor;
     return isDark
-        ? AppColors.light.withOpacity(0.6)
-        : AppColors.dark.withOpacity(0.6);
+        ? AppColors.light.withOpacity(0.7)
+        : AppColors.dark.withOpacity(0.7);
   }
 }
