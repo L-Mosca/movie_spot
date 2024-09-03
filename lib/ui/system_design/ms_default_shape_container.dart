@@ -32,7 +32,7 @@ class MsDefaultShapeContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = context.isDarkMode();
+    final isDark = context.actualIsDarkMode();
     return Container(
       decoration: BoxDecoration(
         color: _containerColor(isDark),
@@ -67,6 +67,6 @@ class MsDefaultShapeContainer extends StatelessWidget {
   Color _borderColor(bool isDark) {
     if (isDark && borderDarkColor != null) return borderDarkColor!;
     if (!isDark && borderLightColor != null) return borderLightColor!;
-    return (isDark) ? AppColors.darkGrey.withOpacity(0.4) : AppColors.grey;
+    return (isDark) ? AppColors.primary.withOpacity(0.4) : AppColors.grey;
   }
 }

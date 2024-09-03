@@ -57,7 +57,7 @@ class AppSizes {
   static const double cardRadiusMd = 12.0;
   static const double cardRadiusSm = 10.0;
   static const double cardRadiusXs = 6.0;
-  static const double cardElevation = 2.0;
+  static const double cardElevation = 6.0;
 
   // Image Carousel Height
   static const double imageCarouselHeight = 200.0;

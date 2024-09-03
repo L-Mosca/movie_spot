@@ -55,7 +55,7 @@ class MsBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = context.isDarkMode();
+    final isDark = context.actualIsDarkMode();
     Color contentColor = _contentColor(isDark);
     Color borderColor = _borderColor(isDark);
 
@@ -97,12 +97,12 @@ class MsBackButton extends StatelessWidget {
   Color _contentColor(bool isDark) {
     if (isDark && iconDarkColor != null) return iconDarkColor!;
     if (!isDark && iconLightColor != null) return iconLightColor!;
-    return (isDark) ? AppColors.grey : AppColors.dark;
+    return (isDark) ?  AppColors.primary.withOpacity(0.9) : AppColors.dark;
   }
 
   Color _borderColor(bool isDark) {
     if (isDark && borderDarkColor != null) return borderDarkColor!;
     if (!isDark && borderLightColor != null) return borderLightColor!;
-    return (isDark) ? AppColors.darkGrey.withOpacity(0.4) : AppColors.grey;
+    return (isDark) ? AppColors.primary.withOpacity(0.4) : AppColors.grey;
   }
 }
