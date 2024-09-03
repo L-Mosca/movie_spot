@@ -23,15 +23,26 @@ class AppColors {
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF333333);
   static const Color textWhite = Color(0xFFFFFFFF);
+  static const Color textDark = Color(0xFF565672);
 
   // Background Colors
   static const Color light = Color(0xFFF6F6F6);
-  static const Color dark = Color(0xFF272727);
+  static const Color dark = Color(0xFF17162E);
   static const Color primaryBackground = Color(0xFFF3F5FF);
+
+  // Card colors
+  static const Color cardLight = Color(0xFFFAFAFA);
+  static const Color cardDark = Color(0xFF1D1C3B);
+  static const Color cardShadowLight = Color(0xFF626262);
+  static const Color cardShadowDark = Color(0xFF5A5ABB);
+
+  // Rating color
+  static const Color ratingLightColor = Color(0xFFFFD515);
+  static const Color ratingDarkColor = Color(0xFFFFE24B);
 
   // Background Container Colors
   static const Color lightContainer = Color(0xFFF6F6F6);
-  static Color darkContainer = AppColors.white.withOpacity(0.1);
+  static Color darkContainer = AppColors.dark.withOpacity(0.1);
 
   // Button Colors
   static const Color buttonPrimary = Color(0xFF4B68FF);

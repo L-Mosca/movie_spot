@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie_spot/router/app_router.dart';
+import 'package:movie_spot/router/routes/home/home_router.dart';
 import 'package:movie_spot/ui/screens/login/greetings/bloc/greetings_bloc.dart';
 import 'package:movie_spot/ui/screens/login/greetings/bloc/greetings_state.dart';
+import 'package:movie_spot/ui/screens/login/greetings/widgets/greetings_continue_as_guest.dart';
 import 'package:movie_spot/ui/screens/login/greetings/widgets/greetings_image.dart';
 import 'package:movie_spot/ui/screens/login/greetings/widgets/greetings_login_button.dart';
 import 'package:movie_spot/ui/screens/login/greetings/widgets/greetings_register_button.dart';
@@ -33,6 +36,7 @@ class GreetingsPage extends StatelessWidget {
         children: [
           const GreetingsImage(),
           _buttons(bloc),
+          GreetingsContinueAsGuest(onPressed: _navigateToHome(context))
         ],
       ),
     );
@@ -48,6 +52,10 @@ class GreetingsPage extends StatelessWidget {
       ],
     );
   }
+
+  void Function() _navigateToHome(BuildContext context) => () {
+        context.navigate(HomeRouter.page);
+      };
 
   GreetingsLoginButton _loginButton(LoginBloc bloc) {
     const loginIndex = AppConstants.signInPageIndex;

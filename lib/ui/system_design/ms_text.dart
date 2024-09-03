@@ -36,6 +36,8 @@ enum TextType {
 /// [textOverflow] - Text overflow type
 ///
 /// [textType] - Text type (headline, body...)
+///
+/// [decoration] - Text decoration
 class MsText extends StatelessWidget {
   const MsText({
     super.key,
@@ -48,6 +50,7 @@ class MsText extends StatelessWidget {
     this.maxLines,
     this.textOverflow,
     this.textType,
+    this.decoration,
   });
 
   // Text setup
@@ -60,10 +63,11 @@ class MsText extends StatelessWidget {
   final Color? fontLightColor;
   final Color? fontDarkColor;
   final TextType? textType;
+  final TextDecoration? decoration;
 
   @override
   Widget build(BuildContext context) {
-    final isDarkMode = context.isDarkMode();
+    final isDarkMode = context.actualIsDarkMode();
     final textStyle = _textStyle(context);
 
     return Text(
@@ -72,6 +76,8 @@ class MsText extends StatelessWidget {
       maxLines: maxLines,
       overflow: textOverflow,
       style: textStyle?.copyWith(
+        decoration: decoration,
+        decorationColor: _fontColor(isDarkMode),
         fontSize: fontSize,
         color: _fontColor(isDarkMode),
         fontWeight: fontWeight,
