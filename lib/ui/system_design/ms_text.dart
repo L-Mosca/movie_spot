@@ -67,7 +67,7 @@ class MsText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDarkMode = context.isDarkMode();
+    final isDarkMode = context.actualIsDarkMode();
     final textStyle = _textStyle(context);
 
     return Text(

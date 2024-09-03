@@ -134,7 +134,7 @@ class _MsTextFieldState extends State<MsTextField> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = context.isDarkMode();
+    final isDark = context.actualIsDarkMode();
 
     return MsDefaultShapeContainer(
       borderDarkColor: widget.borderDarkColor,
@@ -202,7 +202,7 @@ class _MsTextFieldState extends State<MsTextField> {
 
   TextStyle? get _fontStyle => Theme.of(context).textTheme.bodyMedium?.copyWith(
         fontWeight: widget.fontWeight,
-        color: _textColor(context.isDarkMode()),
+        color: _textColor(context.actualIsDarkMode()),
         fontSize: widget.fontSize ?? 16.0,
       );
 
@@ -216,7 +216,7 @@ class _MsTextFieldState extends State<MsTextField> {
 
   TextStyle? get _labelTextStyle =>
       Theme.of(context).textTheme.bodyMedium?.copyWith(
-            color: _hintColor(context.isDarkMode()),
+            color: _hintColor(context.actualIsDarkMode()),
             fontWeight: FontWeight.w400,
             fontSize: widget.fontSize ?? 16.0,
           );

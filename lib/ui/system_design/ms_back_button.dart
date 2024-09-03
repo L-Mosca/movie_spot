@@ -55,7 +55,7 @@ class MsBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = context.isDarkMode();
+    final isDark = context.actualIsDarkMode();
     Color contentColor = _contentColor(isDark);
     Color borderColor = _borderColor(isDark);
 

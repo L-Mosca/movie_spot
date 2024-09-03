@@ -59,7 +59,7 @@ class MsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDarkMode = context.isDarkMode();
+    final isDarkMode = context.actualIsDarkMode();
 
     final shadowColor = isDarkMode
         ? shadowDarkColor ?? AppColors.cardShadowDark

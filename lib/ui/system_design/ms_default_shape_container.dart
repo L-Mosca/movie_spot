@@ -32,7 +32,7 @@ class MsDefaultShapeContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = context.isDarkMode();
+    final isDark = context.actualIsDarkMode();
     return Container(
       decoration: BoxDecoration(
         color: _containerColor(isDark),
