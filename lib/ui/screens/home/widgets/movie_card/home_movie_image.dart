@@ -12,7 +12,6 @@ class HomeMovieImage extends StatelessWidget {
       flex: 1,
       child: MsCard(
         width: 140,
-        height: 200,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(AppSizes.cardRadiusMd),
           child: Image.asset(

@@ -4,6 +4,7 @@ import 'package:movie_spot/utils/theme/custom_themes/app_bar_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/check_box_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/chip_theme.dart';
+import 'package:movie_spot/utils/theme/custom_themes/circular_progress_indicator_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/elevated_button_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/outlined_button_theme.dart';
 import 'package:movie_spot/utils/theme/custom_themes/text_field_theme.dart';
@@ -27,6 +28,7 @@ class AppTheme {
     chipTheme: MChipTheme.lightChipTheme,
     outlinedButtonTheme: MOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: MTextFieldTheme.lightTextFieldTheme,
+    progressIndicatorTheme: MCircularProgressIndicatorTheme.lightProgressIndicatorTheme,
   );
 
   /// Dark Theme
@@ -43,5 +45,7 @@ class AppTheme {
       checkboxTheme: MCheckBoxTheme.darkCheckBoxTheme,
       chipTheme: MChipTheme.darkChipTheme,
       outlinedButtonTheme: MOutlinedButtonTheme.darkOutlinedButtonTheme,
-      inputDecorationTheme: MTextFieldTheme.darkTextFieldTheme);
+      inputDecorationTheme: MTextFieldTheme.darkTextFieldTheme,
+      progressIndicatorTheme: MCircularProgressIndicatorTheme.darkProgressIndicatorTheme,
+  );
 }

@@ -42,7 +42,7 @@ class HomeMovieRating extends StatelessWidget {
         return RatingWidget(
           selectedColor: starColor,
           unSelectedColor: emptyColor,
-          child: const Icon(Icons.star, size: 24),
+          child: const Icon(Icons.star, size: 20),
         );
       },
     );
